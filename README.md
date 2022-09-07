@@ -159,3 +159,10 @@ kubectl patch svc jenkins -p '{"spec": {"type": "NodePort"}}' -n jenkins
 ```
 ###  Authors
 -  Vikram K (www.youtube.com/c/devopsmadeeasy)
+
+#use this
+anchore-cli --u admin --p foobar image add docker.io/library/openjdk:8-jre-alpine
+
+After the image is downloaded, Anchore CLI will begin the process of analyzing the image. This will take some time. If you issue the command:
+
+anchore-cli --u admin --p foobar image list
