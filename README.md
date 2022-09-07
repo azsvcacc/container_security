@@ -166,3 +166,11 @@ anchore-cli --u admin --p foobar image add docker.io/library/openjdk:8-jre-alpin
 After the image is downloaded, Anchore CLI will begin the process of analyzing the image. This will take some time. If you issue the command:
 
 anchore-cli --u admin --p foobar image list
+anchore-cli --u admin --p foobar image vuln docker.io/library/openjdk:8-jre-alpine all
+anchore-cli --u admin --p foobar evaluate check docker.io/library/debian:latest --detail
+####You can even subscribe to receive notifications when new CVEs are added to an update with the command:
+
+anchore-cli --u admin --p foobar subscription activate vuln_update docker.io/library/debian:latest
+
+
+https://thenewstack.io/anchore-scan-your-container-images-for-vulnerabilities-from-the-command-line/
